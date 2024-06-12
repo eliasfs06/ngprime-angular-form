@@ -1,0 +1,39 @@
+<div class="center-container">
+    <div class="card-container">
+      <p-card header="Formulário de Usuário">
+        <ng-template pTemplate="subtitle">
+          Insira aqui um subtítulo para o seu formulário
+        </ng-template>
+        <div>
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-field">
+              <label>Nome: </label>
+              <input type="text" [(ngModel)]="usuario.nome" name="nome" pInputText>
+            </div>
+            <div class="form-field">
+              <label>Email: </label>
+              <input type="email" [(ngModel)]="usuario.email" name="email" pInputText>
+            </div>
+            <div class="form-field">
+              <label>Gênero: </label>
+              <p-dropdown [(ngModel)]="usuario.genero" name="genero" [options]="generos"></p-dropdown>
+            </div>
+            <div class="form-field">
+              <label>Foto de Perfil: </label>
+              <p-fileUpload name="fotoPerfil" [(ngModel)]="usuario.fotoPerfil"></p-fileUpload>
+            </div>
+            <div class="form-field">
+              <p-checkbox name="receberNotificacoes" [(ngModel)]="usuario.receberNotificacoes" binary="true"></p-checkbox>
+              <label>Receber notificações </label>
+            </div>
+            <div class="form-field">
+              <p-checkbox name="termosDeUsoAceitos" [(ngModel)]="usuario.termosDeUsoAceitos" binary="true"></p-checkbox>
+              <label>Aceitar termos de uso </label>
+            </div>
+            <button type="submit" pButton>Enviar</button>
+          </form>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  

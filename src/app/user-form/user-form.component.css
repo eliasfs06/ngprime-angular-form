@@ -1,0 +1,15 @@
+.card-container {
+    width: 50%;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightslategray;
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+  }
